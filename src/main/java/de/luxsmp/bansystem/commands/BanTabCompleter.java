@@ -43,7 +43,7 @@ public class BanTabCompleter implements TabCompleter {
         if (args.length == 1)
             return filterOnlinePlayers(args[0]);
         if (args.length == 2)
-            return List.of("Hacking", "Cheating", "Griefing", "Spam");
+            return filter(getReasons("ban"), args[1]);
         return List.of();
     }
 
@@ -53,7 +53,7 @@ public class BanTabCompleter implements TabCompleter {
         if (args.length == 2)
             return filter(TIME_EXAMPLES, args[1]);
         if (args.length == 3)
-            return List.of("Hacking", "Cheating", "Griefing", "Spam");
+            return filter(getReasons("tempban"), args[2]);
         return List.of();
     }
 
@@ -67,8 +67,12 @@ public class BanTabCompleter implements TabCompleter {
         if (args.length == 1)
             return filterOnlinePlayers(args[0]);
         if (args.length == 2)
-            return List.of("AFK", "Rule violation", "Disrespect");
+            return filter(getReasons("kick"), args[1]);
         return List.of();
+    }
+
+    private List<String> getReasons(String type) {
+        return plugin.getConfig().getStringList("reasons." + type);
     }
 
     private List<String> filterOnlinePlayers(String prefix) {

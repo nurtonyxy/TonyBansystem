@@ -1,5 +1,21 @@
 prefix: "&8[&cBanSystem&8] &r"
 
+reasons:
+  ban:
+    - "Hacking"
+    - "Cheating"
+    - "Griefing"
+    - "Spam"
+  tempban:
+    - "Hacking"
+    - "Cheating"
+    - "Griefing"
+    - "Spam"
+  kick:
+    - "AFK"
+    - "Rule violation"
+    - "Disrespect"
+
 messages:
   # --- Ban ---
   ban-success: "&aYou have permanently banned &e{player}&a for: &f{reason}"
