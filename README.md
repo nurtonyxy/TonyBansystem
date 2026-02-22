@@ -30,12 +30,3 @@ A powerful and user-friendly ban management system designed to keep your server 
 | `/ban [ID] [Time] [Reason]` | Bans a player temporarily or permanently. | `admin.ban` |
 | `/unban [ID/Identifier]` | Removes a ban from a specific player. | `admin.unban` |
 | `/checkban [ID]` | Checks the current ban status of a player. | `admin.check` |
-
-## ⚙️ Configuration Example
-
-Here is a snippet of how the `config.lua` usually looks:
-```lua
-Config = {}
-Config.Language = 'en' -- Options: 'de', 'en'
-Config.Webhook = 'YOUR_DISCORD_WEBHOOK_URL'
-Config.AdminGroup = 'admin'
