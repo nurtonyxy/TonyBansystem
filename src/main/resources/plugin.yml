@@ -1,0 +1,52 @@
+name: AdvancedBanSystem
+version: '${project.version}'
+main: de.luxsmp.bansystem.AdvancedBanSystem
+api-version: '1.21'
+description: A full-featured ban and moderation system.
+authors: [ Tony ]
+
+commands:
+  ban:
+    description: Permanently ban a player.
+    usage: /ban <player> <reason>
+    permission: ban.use
+  tempban:
+    description: Temporarily ban a player.
+    usage: /tempban <player> <time> <reason>
+    permission: tempban.use
+  unban:
+    description: Unban a player.
+    usage: /unban <player>
+    permission: unban.use
+  kick:
+    description: Kick a player from the server.
+    usage: /kick <player> <reason>
+    permission: kick.use
+  history:
+    description: View the ban history of a player.
+    usage: /history <player>
+    permission: history.use
+  bansystem:
+    description: BanSystem management commands.
+    usage: /bansystem reload
+    permission: bansystem.admin
+
+permissions:
+  ban.use:
+    description: Allows the use of /ban
+    default: op
+  tempban.use:
+    description: Allows the use of /tempban
+    default: op
+  unban.use:
+    description: Allows the use of /unban
+    default: op
+  kick.use:
+    description: Allows the use of /kick
+    default: op
+  history.use:
+    description: Allows the use of /history
+    default: op
+  bansystem.admin:
+    description: Allows management of the BanSystem plugin.
+    default: op

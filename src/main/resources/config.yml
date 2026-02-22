@@ -1,0 +1,48 @@
+prefix: "&8[&cBanSystem&8] &r"
+
+messages:
+  # --- Ban ---
+  ban-success: "&aYou have permanently banned &e{player}&a for: &f{reason}"
+  ban-screen: |
+    &c&lYou are banned from this server!
+    &7Reason: &f{reason}
+    &7Banned by: &f{moderator}
+    &7Date: &f{date}
+    &7Duration: &cPermanent
+  already-banned: "&c{player} is already banned!"
+
+  # --- Temp-Ban ---
+  tempban-success: "&aYou have temporarily banned &e{player}&a for &e{duration}&a because: &f{reason}"
+  tempban-screen: |
+    &c&lYou are temporarily banned from this server!
+    &7Reason: &f{reason}
+    &7Banned by: &f{moderator}
+    &7Date: &f{date}
+    &7Expires: &e{expiry}
+
+  # --- Unban ---
+  unban-success: "&aYou have unbanned &e{player}&a."
+  not-banned: "&c{player} is not currently banned."
+
+  # --- Kick ---
+  kick-success: "&aYou have kicked &e{player}&a for: &f{reason}"
+  kick-screen: |
+    &c&lYou have been kicked from the server!
+    &7Reason: &f{reason}
+    &7Kicked by: &f{moderator}
+
+  # --- Join (temp ban remaining time) ---
+  tempban-remaining: "&cYour ban expires in: &e{remaining}"
+
+  # --- General ---
+  no-permission: "&cYou don't have permission to do that."
+  player-not-found: "&cPlayer &e{player} &cwas not found."
+  invalid-time: "&cInvalid time format! Use: &e30s&c, &e10m&c, &e2h&c, &e7d"
+  usage-ban: "&cUsage: /ban <player> <reason>"
+  usage-tempban: "&cUsage: /tempban <player> <time> <reason>"
+  usage-unban: "&cUsage: /unban <player>"
+  usage-kick: "&cUsage: /kick <player> <reason>"
+  reload-success: "&aConfiguration reloaded successfully."
+
+  # --- History ---
+  history-none: "&e{player} &7has no ban history."
